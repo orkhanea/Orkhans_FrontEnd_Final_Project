@@ -600,6 +600,22 @@ $(document).ready(function() {
     }
 
 
+    // Loader
+
+    $(window).on('load', function() {
+        setTimeout(removeLoader, 2000); //wait for page load PLUS two seconds.
+    });
+
+    function removeLoader() {
+        $(".lds-roller")[0].style.display = "none";
+        $("body")[0].style.overflow = "unset";
+    }
+
+
+
+    // Loader-end
+
+
 
 
 });
